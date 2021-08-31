@@ -1,11 +1,13 @@
+DROP schema IF EXISTS otus;
+create schema otus;
 
-DROP DATABASE IF EXISTS otus;
-CREATE DATABASE otus;
-
-
-
-CREATE TABLE pickup_by_hour (
-hour_of_day           INT,
-total_trips           INT
+create table distance_statistics
+(
+    date text,
+    count bigint not null,
+    min double precision,
+    max double precision,
+    avg double precision,
+    "RMSD(trip_distance)" double precision
 );
 
